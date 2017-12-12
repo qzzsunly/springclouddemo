@@ -12,3 +12,7 @@ eureka:
             defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 logging:
     level: debug
+spring:
+    util:
+        timeout:
+            sec: 5
