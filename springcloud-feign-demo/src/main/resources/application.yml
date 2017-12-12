@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://qin.local:8761/eureka/
   instance:
-        hostname: qin.local
+    hostname: qin.local
 server:
   port: 8765
 spring:

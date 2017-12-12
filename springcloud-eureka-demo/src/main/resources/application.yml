@@ -4,6 +4,7 @@ server:
 eureka:
     instance:
         hostname: qin.local
+        instance-id: ${eureka.instance.hostname}:${server.port}
     client:
         registerWithEureka: false
         fetchRegistry: false
