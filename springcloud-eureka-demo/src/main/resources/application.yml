@@ -5,14 +5,17 @@ eureka:
     instance:
         hostname: qin.local
         instance-id: ${eureka.instance.hostname}:${server.port}
+        prefer-ip-address: true
     client:
-        registerWithEureka: false
+        registerWithEureka: true
         fetchRegistry: false
         serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+            defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8762/eureka/,http://${eureka.instance.hostname}:8763/eureka/
 logging:
     level: debug
 spring:
+    application:
+        name: eureka-server
     util:
         timeout:
             sec: 5
